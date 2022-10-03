@@ -27,6 +27,7 @@ function liControl(atributte){
     tagCard.id = categoryID;
     if(tagCard.id === "1"){
         tagCard.innerText = "Entrada"
+        
     }
     else if(tagCard.id === "2"){
         tagCard.innerText = "Saída"
@@ -34,26 +35,52 @@ function liControl(atributte){
 
     let buttonTrash = document.createElement("button")
     buttonTrash.classList.add("button-remove-card")
-    buttonTrash.id = id + 2
- 
-    buttonTrash.addEventListener('click', () => {
-        tagli.remove()
-   
-    })
-    
 
+    
     let imgTrashCan = document.createElement("img")
     imgTrashCan.src = "./assets/trash.png"
     imgTrashCan.alt = "trashCan"
+    imgTrashCan.id = id
 
+
+
+
+
+    imgTrashCan.addEventListener('click', (event) => {
+        // insertedValues.slice([início[,fim]])
+     const removeValues = insertedValues.find((element, index, array) => {
+            console.log(event.target.id)
+            if(element.id == event.target.id){
+            array.splice(index, 1)
+              console.log(array)
+            }
+        })
+        separateElements(insertedValues)
+     let valuesEntry = newArrEntry.find((element, index, array) => {
+            console.log(event.target.id)
+            if(element.id == event.target.id){
+            array.splice(index, 1)
+              console.log(array)
+            }
+        })
+        separateElements(newArrEntry)
+     const valuesOut = newArrOut.find((element, index, array) => {
+            console.log(event.target.id)
+            if(element.id == event.target.id){
+            array.splice(index, 1)
+              console.log(array)
+            }
+        })
+        separateElements(newArrOut)
+
+    })
+
+        
     tagDivLi.append(tagCard, buttonTrash)
     buttonTrash.appendChild(imgTrashCan)
     tagli.append(tagSpan, tagDivLi)
     
     // tagUL.appendChild(tagli)
-    buttonTrash.addEventListener('click', function(event){
-
-    })
 
    
 
@@ -71,28 +98,17 @@ sumSpan.innerText = `R$00,00`
 
 
 let separateElements = (createCards) =>{
-
+    tagUL.innerHTML = ""
+    sumSpan.innerText = `R$00,00`
     createCards.forEach((initial) => {
         
         tagUL.append(liControl(initial))
-        sumSpan.innerText = `R$${sumValues()},00`
+        sumSpan.innerText = `R$${sumValues(insertedValues)},00`
 
 })
     
     }
     
-    
-    
-    function sumValues(){
-        let basicSum = 0;
-        let countSum = insertedValues.forEach((initial, index) =>{
-            basicSum += initial.value
-
-        })  
-        return basicSum
-    }
-
-
 
 
 
@@ -112,7 +128,8 @@ let separateElements = (createCards) =>{
         btnEmpty.classList.add("btn-empty")
         btnEmpty.id = "btn-let"
         btnEmpty.innerText = "Registrar novo valor"
-    
+        btnEmpty.addEventListener('click', () => openOrClose())
+
         divEmpty.append(tagH4, btnEmpty)
         tagUL.append(divEmpty)
     }

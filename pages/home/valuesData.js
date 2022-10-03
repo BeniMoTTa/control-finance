@@ -1,7 +1,8 @@
 const valuesCategory = ["Entrada", "Saída"];
 /*ID:1 = Entrada /  ID:2 = SAÍDA    */
 
-const newArr = [];
+const newArrEntry = [];
+const newArrOut = []
 const insertedValues = [
   // {
   //   id: 1,
@@ -42,7 +43,7 @@ btnRegister.addEventListener('click', (event) =>{
   
   
   const inputOutput = Number(input.value)
-  let atriId = `MyId${1}`;
+  let atriId = Math.floor(Math.random() * 100);;
 
   if(radioEntrance.checked){
     insertedValues.forEach((currentValue, index) =>{
@@ -50,13 +51,19 @@ btnRegister.addEventListener('click', (event) =>{
       
 
     })
+   
     insertedValues.push({
       id : atriId,
       value : inputOutput,
       categoryID : 1
       
-    })
     
+    })
+    newArrEntry.push({
+      id : atriId,
+      value : inputOutput,
+      categoryID : 1
+    })
   }
   else if(radioOut.checked){
     insertedValues.forEach((currentValue, index) =>{
@@ -68,7 +75,11 @@ btnRegister.addEventListener('click', (event) =>{
       value : inputOutput,
       categoryID : 2
     })
-    
+    newArrOut.push({
+      id : atriId,
+      value : inputOutput,
+      categoryID : 2
+    })
   }
   tagUL.innerHTML = ""
 
@@ -102,11 +113,14 @@ let filterEntry = () =>{
   btnEntry.addEventListener('click', () => {
     let currentArray = insertedValues
     let filterEntry = currentArray.filter((e)=>e.categoryID === 1);
-    tagUL.innerHTML =""
     
+    tagUL.innerHTML =""
+
     separateElements(filterEntry)
     
+    sumSpan.innerText = `R$${sumValues(newArrEntry)},00`
     if(tagUL.innerHTML === ""){
+      sumSpan.innerText =`R$00,00` 
       emptyDivAll()
     }
   })
@@ -122,10 +136,15 @@ let filterOut = () =>{
   btnOut.addEventListener('click', () => {
     let currentArray = insertedValues
     let filterOut = currentArray.filter((e)=>e.categoryID === 2);
+    
+    console.log(sumValues(newArrOut))
     tagUL.innerHTML =""
-
-    separateElements(filterOut)    
+    
+    separateElements(filterOut)   
+    sumSpan.innerText = `R$${sumValues(newArrOut)},00` 
+    
     if(tagUL.innerHTML === ""){
+      sumSpan.innerText =`R$00,00` 
       emptyDivAll()
     }
   })
@@ -137,3 +156,11 @@ filterOut()
 
 
 
+function sumValues(arr){
+  let basicSum = 0;
+  let countSum = arr.forEach((initial, index) =>{
+      basicSum += initial.value
+
+  })  
+  return basicSum
+}

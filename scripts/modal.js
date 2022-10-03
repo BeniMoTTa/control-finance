@@ -1,7 +1,7 @@
 /* Desenvolva sua lógica aqui */
 const buttonRegister = document.getElementById("open-modal")
 const tagSectionModal = document.getElementById("modal-register")
-const registerWhenEmpty = document.querySelector("#btn-let")
+
 
 
 
@@ -115,7 +115,7 @@ const closeWithCancel = document.getElementById("btn-can")
 buttonRegister.addEventListener('click', () => openOrClose())
 buttonCloseModal.addEventListener('click', () => openOrClose())
 closeWithCancel.addEventListener('click', () => openOrClose())
-registerWhenEmpty.addEventListener('click', () => openOrClose())
+
 
 
 
