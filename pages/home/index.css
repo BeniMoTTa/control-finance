@@ -1,1 +1,140 @@
-/* Desenvolva a estilização da sua página aqui */
+header{
+    width: 100%;
+    background-color: var(--color-grey-5);
+
+}
+
+.logo-site{
+    margin-left: 10px;
+    margin-top: 15px;
+    font-size: 20px
+}
+
+.info-site{
+    margin: 0 auto;
+    padding: 1.75rem 0;
+    max-width: 700px;
+    height: 132px;
+
+}
+.color-control{
+    color: var(--color-brand-1);
+}
+#app{
+    min-width: 320px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.title-area{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-grey-1);
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.buttons-div{
+    display: flex;
+   flex-direction: row;
+    align-items: center;
+
+    margin-left: 10px;
+
+}
+
+.responsive-logo{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section-items{
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 28px;
+    padding-left: 20px;
+}
+
+.area-high-level{
+    min-width: 320px;
+    margin-top: 28px;
+}
+.section-items ul{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.card-item{
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    justify-content: space-between;
+    border: 1.5px solid var(--color-grey-5);
+    border-radius: 8px;
+    width: 98%;
+    height: 44px;
+    align-items: center;
+    margin-top: 28px;
+}
+
+.sum-values{
+    min-width: 320px;
+    width: 98%;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-grey-4);
+    border-radius: 8px;
+    padding-left: 15px;
+    padding-right: 25px;
+}
+
+
+.sum-values h4{
+    font-size: 14px;
+    font-weight: 500;
+}
+.sum-values span{
+    font-size: 14px;
+    font-weight: 500;
+}
+.interation-direct{
+    display: flex;
+    flex-direction: row;
+}
+
+.tag-card{
+    width: 68px;
+    height: 26px;
+    background-color: var(--color-grey-4);
+    border: none;
+    border-radius: 4px;
+    margin-right: 25px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty{
+    width: 98%;
+    height: 120px;
+    background-color: var(--color-grey-4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    border: 1px dotted var(--color-grey-1) ;
+    border-radius: 8px;
+}
+
+.title-empty{
+    font-size: 20px;
+    margin-bottom: 20px;
+}

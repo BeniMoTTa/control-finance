@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Finance</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Control Finance - Seu controle financeiro">
+
+      <link rel="stylesheet" href="./styles/globalStyles.css">
+    <link rel="stylesheet" href="./pages/home/index.css">
+    <link rel="stylesheet" href="./styles/buttons.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="./styles/inputsRadio.css">
+
+</head>
+<body>
+    <header class="container-header">
+        <nav class="info-site">
+            <div class="responsive-logo">
+                <h1 class="logo-site">
+                    <span class="color-control">Control</span> Finance
+                </h1>
+                <button class="register-value" id="open-modal">Registrar novo valor</button>
+            </div>
+            <!-- <div class="responsive-button">
+            
+            </div> -->
+        </nav>
+    </header>
+    <main id="app">
+        <section class="area-high-level">
+            <h2 class="title-area">Resumo financeiro</h2>
+            <div class="buttons-div">
+                <button class="button-desactive" id="btn-all">Todos</button>
+                <button class="button-desactive" id="btn-entry-filter">Entradas</button>
+                <button class="button-desactive" id="btn-out-filter">Saídas</button>
+            </div>
+        </section>
+        <section class="section-items">
+            <div class="sum-values" id="sum-total">
+                <h4>Soma dos valores</h4>
+                <!-- <span id="sum-total">R$00,00</span> -->
+            </div>
+            <ul id="total-list">
+                <!-- <li class="card-item">
+                    <span>R$40,00</span>
+                    <div class="interation-direct">
+                    <span class="tag-card">Entrada</span>
+                    <button class="button-remove-card">
+                        <img src="./../../assets/trash.png" alt="trashCan">
+                    </button>
+                    </div>
+                </li>
+                <li class="card-item">
+                    <span>R$20,00</span>
+                    <div class="interation-direct">
+                    <span class="tag-card">Entrada</span>
+                    <button class="button-remove-card">
+                        <img src="./../../assets/trash.png" alt="trashCan">
+                    </button>
+                    </div>
+                </li>
+                <li class="card-item">
+                    <span>R$39,00</span>
+                    <div class="interation-direct">
+                    <span class="tag-card">Entrada</span>
+                    <button class="button-remove-card">
+                        <img src="./../../assets/trash.png" alt="trashCan">
+                    </button>
+                    </div>
+                </li>
+                <li class="card-item">
+                    <span>R$80,00</span>
+                    <div class="interation-direct">
+                    <span class="tag-card">Entrada</span>
+                    <button class="button-remove-card">
+                    <img src="./../../assets/trash.png" alt="trashCan">
+                    </button>
+                    </div>
+                </li>
+                <li class="card-item">
+                    <span>R$870,00</span>
+                    <div class="interation-direct">
+                    <span class="tag-card">Entrada</span>
+                    <button class="button-remove-card">
+                        <img src="./../../assets/trash.png" alt="trashCan">
+                    </button>
+                    </div>
+                </li>
+                <li class="card-item">
+                    <span>R$97,00</span>
+                    <div class="interation-direct">
+                    <span class="tag-card">Entrada</span>
+                    <button class="button-remove-card">
+                        <img src="./../../assets/trash.png" alt="trashCan">
+                    </button>
+                    </div>
+                </li>
+                <li class="card-item">
+                    <span>R$104,00</span>
+                    <div class="interation-direct">
+                    <span class="tag-card">Entrada</span>
+                    <button class="button-remove-card">
+                        <img src="./../../assets/trash.png" alt="trashCan">
+                    </button>
+                    </div>
+                </li>
+                <li class="card-item">
+                    <span>R$870,00</span>
+                    <div class="interation-direct">
+                    <span class="tag-card">Entrada</span>
+                    <button class="button-remove-card">
+                        <img src="./../../assets/trash.png" alt="trashCan">
+                    </button>
+                    </div>
+                </li> -->
+                <!-- <div class="empty" id="div-empty">
+                    <h4 class="title-empty">Sem nenhum valor na categoria Entrada</h4>
+                    <button class="btn-empty" id="btn-empty">Registrar novo valor</button>
+                </div> -->
+
+            </ul>
+        </section>
+    </main>
+        <section id="modal-register" class="modal-wrapper" > 
+            <!-- <div class="modal">
+                <h3 class="title-modal">Registro de valor</h3>
+                <div class="text-modal">
+                    <span>Digite o valor e em seguida aperte no botão referente ao tipo do valor</span>
+                </div>
+                <form class="form-modal">
+                <div class="value-div-modal">
+                    <span>Valor</span>
+                    <input type="number" class="input-value" step="0.01" name="quantity" min="0.01">
+                </div>
+               <div class="type-value-modal">
+                <h5>Tipo de valor</h5>
+                <button class="btn-modal-default" id="1">Entrada</button>
+                <button class="btn-modal-default" id="2">Saída</button>
+               </div>
+                </form>
+               <div class="btn-aplication-modal">
+                    <button class="btn-cancel">Cancelar</button>
+                    <button class="btn-insert-value">Inserir valor</button>
+                </div>
+                <button class="close-button" id="modalClose" >X</button>
+            </div> -->
+        </section>
+
+    </section>
+    <script src="./scripts/modal.js"></script>
+    <script src="./pages/home/valuesData.js"></script>
+    <script src="./pages/home/index.js"></script>
+</body>
+</html>
