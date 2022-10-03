@@ -43,7 +43,7 @@ function liControl(atributte){
     
 
     let imgTrashCan = document.createElement("img")
-    imgTrashCan.src = "./../../assets/trash.png"
+    imgTrashCan.src = "./assets/trash.png"
     imgTrashCan.alt = "trashCan"
 
     tagDivLi.append(tagCard, buttonTrash)
